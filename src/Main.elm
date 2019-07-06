@@ -1,7 +1,7 @@
 module Main exposing (main)
 
 import Browser
-import Html exposing (Html, a, footer, h1, header, img, li, node, p, section, text, ul)
+import Html exposing (Html, a, footer, h1, header, img, li, node, p, section, text, ul, div)
 import Html.Attributes exposing (class, href, src, target)
 
 
@@ -97,7 +97,9 @@ view model =
 siteHeader : Html Msg
 siteHeader =
     header [ class "site-header" ]
-        [ h1 [] [ text "elm-stafighter is taking off." ]
+        [ img [ src "./assets/index/telstar_logo_black.png", class "hanbarger" ] []
+        , div [] []
+        , img [ src "./assets/index/ic_menu_48px.svg" ] []
         ]
 
 

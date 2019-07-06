@@ -4849,8 +4849,15 @@ var author$project$Main$siteFooter = A2(
 					elm$html$Html$text('© 2019 y047aka')
 				]))
 		]));
-var elm$html$Html$h1 = _VirtualDom_node('h1');
+var elm$html$Html$div = _VirtualDom_node('div');
 var elm$html$Html$header = _VirtualDom_node('header');
+var elm$html$Html$img = _VirtualDom_node('img');
+var elm$html$Html$Attributes$src = function (url) {
+	return A2(
+		elm$html$Html$Attributes$stringProperty,
+		'src',
+		_VirtualDom_noJavaScriptOrHtmlUri(url));
+};
 var author$project$Main$siteHeader = A2(
 	elm$html$Html$header,
 	_List_fromArray(
@@ -4860,14 +4867,24 @@ var author$project$Main$siteHeader = A2(
 	_List_fromArray(
 		[
 			A2(
-			elm$html$Html$h1,
-			_List_Nil,
+			elm$html$Html$img,
 			_List_fromArray(
 				[
-					elm$html$Html$text('elm-stafighter is taking off.')
-				]))
+					elm$html$Html$Attributes$src('./assets/index/telstar_logo_black.png'),
+					elm$html$Html$Attributes$class('hanbarger')
+				]),
+			_List_Nil),
+			A2(elm$html$Html$div, _List_Nil, _List_Nil),
+			A2(
+			elm$html$Html$img,
+			_List_fromArray(
+				[
+					elm$html$Html$Attributes$src('./assets/index/ic_menu_48px.svg')
+				]),
+			_List_Nil)
 		]));
 var elm$html$Html$a = _VirtualDom_node('a');
+var elm$html$Html$h1 = _VirtualDom_node('h1');
 var elm$html$Html$li = _VirtualDom_node('li');
 var elm$virtual_dom$VirtualDom$node = function (tag) {
 	return _VirtualDom_node(
