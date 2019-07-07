@@ -1,45 +1,121 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap");
 body, header, footer, ul, li {
   margin: 0;
   padding: 0;
-  line-height: 1.0; }
+  line-height: 1;
+}
 
 html {
   font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+}
 
 body {
   font-size: 1.6rem;
   display: grid;
   grid-template-rows: auto auto auto;
-  grid-template-columns: 1fr 80% 1fr; }
-  body > header.site-header {
-    grid-row: 1;
-    grid-column: 2;
-    padding: 3.5rem 0 3rem; }
-  body > main {
-    grid-row: 2;
-    grid-column: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 5%; }
-  body > footer.site-footer {
-    grid-row: 3;
-    grid-column: 2;
-    padding: 3rem 0; }
+  grid-template-columns: 1fr 80% 1fr;
+}
+body > header.site-header {
+  grid-row: 1;
+  grid-column: 2;
+  padding: 3.5rem 0 3rem;
+}
+body > main {
+  grid-row: 2;
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5%;
+}
+body > footer.site-footer {
+  grid-row: 3;
+  grid-column: 2;
+  padding: 3rem 0;
+}
 
 section {
-  padding: 2rem 0; }
-  section ul {
-    list-style: none; }
-    section ul li {
-      margin: 1rem 0; }
-      section ul li a {
-        display: block;
-        padding: 1.5rem 1.5rem;
-        font-weight: normal;
-        line-height: 1.6;
-        text-decoration: none;
-        background: #79d9ec;
-        color: inherit;
-        border-radius: 1.5rem; }
+  padding: 2rem 0;
+}
+section ul {
+  list-style: none;
+}
+section ul li {
+  margin: 1rem 0;
+}
+section ul li a {
+  display: block;
+  padding: 1.5rem 1.5rem;
+  font-weight: normal;
+  line-height: 1.6;
+  text-decoration: none;
+  background: #79d9ec;
+  color: inherit;
+  border-radius: 1.5rem;
+}
+
+.site-header {
+  margin: 14px;
+  display: grid;
+  grid-template-columns: 132px 1fr 48px;
+  grid-template-rows: 48px;
+  overflow: hidden;
+}
+.site-header .logo {
+  height: 48px;
+  margin-top: -4px;
+}
+
+.home-gif-container {
+  overflow: hidden;
+}
+.home-gif-container img.top-background {
+  width: 100vw;
+  filter: grayscale(90%);
+}
+
+.number-box {
+  height: 60px;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: 60px;
+}
+.number-box p {
+  display: block;
+  text-align: left;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.number-box p.number {
+  position: relative;
+  margin: 0;
+  font-size: 50px;
+  color: #faef54;
+  line-height: 60px;
+}
+.number-box p.number::before {
+  position: absolute;
+  content: "";
+  background: #faef54;
+  width: 4px;
+  height: 100%;
+  left: 70px;
+}
+.number-box p.title {
+  margin-left: 20px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 0px;
+  font-size: 22px;
+  color: #faef54;
+}
+
+div.main-content p {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=style.css.map */

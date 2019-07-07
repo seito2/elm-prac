@@ -61,6 +61,90 @@ section {
   }
 }
 
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+
+$main-color: rgb(250, 239, 84);
+
+
+
+// body scss
+section.container {
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .site-header {
-  
+  margin: 14px;
+  display: grid;
+  grid-template-columns: 132px 1fr 48px;
+  grid-template-rows: 48px;
+  overflow: hidden;
+
+  & .logo {
+    height: 48px;
+    margin-top: -4px;
+  }
+}
+
+.home-gif-container {
+  overflow: hidden;
+
+  img.top-background {
+    width: 100vw;
+    filter: grayscale(90%);
+  }
+}
+
+// title scss
+.number-box {
+  height: 60px;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: 60px;
+
+  p {
+    display: block;
+    text-align: left;
+    font-family: 'Noto Sans JP', sans-serif;
+
+    &.number {
+      position: relative;
+      margin: 0;
+      font-size: 50px;
+      color: #faef54;
+      line-height: 60px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background: $main-color;
+        width: 4px;
+        height: 100%;
+        left: 70px;
+      }
+    }
+
+    &.title {
+      margin-left: 20px;
+      margin-right: 0;
+      margin-bottom: 0;
+      margin-top: 0px;
+      font-size: 22px;
+      color: $main-color;
+    }
+  }
+}
+
+// detail scss
+div.main-content {
+  p {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 13px;
+  }
 }

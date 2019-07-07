@@ -4817,7 +4817,8 @@ var elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 			return 3;
 	}
 };
-var elm$html$Html$footer = _VirtualDom_node('footer');
+var elm$html$Html$div = _VirtualDom_node('div');
+var elm$html$Html$h2 = _VirtualDom_node('h2');
 var elm$html$Html$p = _VirtualDom_node('p');
 var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var elm$html$Html$text = elm$virtual_dom$VirtualDom$text;
@@ -4830,6 +4831,71 @@ var elm$html$Html$Attributes$stringProperty = F2(
 			elm$json$Json$Encode$string(string));
 	});
 var elm$html$Html$Attributes$class = elm$html$Html$Attributes$stringProperty('className');
+var author$project$Main$detail = F2(
+	function (concept, comment) {
+		return A2(
+			elm$html$Html$div,
+			_List_fromArray(
+				[
+					elm$html$Html$Attributes$class('main-content')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$h2,
+					_List_Nil,
+					_List_fromArray(
+						[
+							elm$html$Html$text(concept)
+						])),
+					A2(
+					elm$html$Html$p,
+					_List_Nil,
+					_List_fromArray(
+						[
+							elm$html$Html$text(comment)
+						]))
+				]));
+	});
+var elm$html$Html$img = _VirtualDom_node('img');
+var elm$html$Html$Attributes$src = function (url) {
+	return A2(
+		elm$html$Html$Attributes$stringProperty,
+		'src',
+		_VirtualDom_noJavaScriptOrHtmlUri(url));
+};
+var author$project$Main$homeGif = A2(
+	elm$html$Html$div,
+	_List_Nil,
+	_List_fromArray(
+		[
+			A2(
+			elm$html$Html$div,
+			_List_fromArray(
+				[
+					elm$html$Html$Attributes$class('home-gif-container')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$img,
+					_List_fromArray(
+						[
+							elm$html$Html$Attributes$class('top-background'),
+							elm$html$Html$Attributes$src('./assets/index/home.gif')
+						]),
+					_List_Nil)
+				])),
+			A2(
+			elm$html$Html$img,
+			_List_fromArray(
+				[
+					elm$html$Html$Attributes$class('telstar-logo-on-background'),
+					elm$html$Html$Attributes$src('./assets/telstar_logo_white.png')
+				]),
+			_List_Nil)
+		]));
+var elm$html$Html$footer = _VirtualDom_node('footer');
 var author$project$Main$siteFooter = A2(
 	elm$html$Html$footer,
 	_List_fromArray(
@@ -4849,15 +4915,7 @@ var author$project$Main$siteFooter = A2(
 					elm$html$Html$text('© 2019 y047aka')
 				]))
 		]));
-var elm$html$Html$div = _VirtualDom_node('div');
 var elm$html$Html$header = _VirtualDom_node('header');
-var elm$html$Html$img = _VirtualDom_node('img');
-var elm$html$Html$Attributes$src = function (url) {
-	return A2(
-		elm$html$Html$Attributes$stringProperty,
-		'src',
-		_VirtualDom_noJavaScriptOrHtmlUri(url));
-};
 var author$project$Main$siteHeader = A2(
 	elm$html$Html$header,
 	_List_fromArray(
@@ -4871,7 +4929,7 @@ var author$project$Main$siteHeader = A2(
 			_List_fromArray(
 				[
 					elm$html$Html$Attributes$src('./assets/index/telstar_logo_black.png'),
-					elm$html$Html$Attributes$class('hanbarger')
+					elm$html$Html$Attributes$class('logo')
 				]),
 			_List_Nil),
 			A2(elm$html$Html$div, _List_Nil, _List_Nil),
@@ -4879,162 +4937,54 @@ var author$project$Main$siteHeader = A2(
 			elm$html$Html$img,
 			_List_fromArray(
 				[
-					elm$html$Html$Attributes$src('./assets/index/ic_menu_48px.svg')
+					elm$html$Html$Attributes$src('./assets/index/ic_menu_48px.svg'),
+					elm$html$Html$Attributes$class('hanbarger')
 				]),
 			_List_Nil)
 		]));
-var elm$html$Html$a = _VirtualDom_node('a');
-var elm$html$Html$h1 = _VirtualDom_node('h1');
-var elm$html$Html$li = _VirtualDom_node('li');
-var elm$virtual_dom$VirtualDom$node = function (tag) {
-	return _VirtualDom_node(
-		_VirtualDom_noScript(tag));
-};
-var elm$html$Html$node = elm$virtual_dom$VirtualDom$node;
-var elm$html$Html$section = _VirtualDom_node('section');
-var elm$html$Html$ul = _VirtualDom_node('ul');
-var elm$html$Html$Attributes$href = function (url) {
-	return A2(
-		elm$html$Html$Attributes$stringProperty,
-		'href',
-		_VirtualDom_noJavaScriptUri(url));
-};
-var elm$html$Html$Attributes$target = elm$html$Html$Attributes$stringProperty('target');
+var elm$html$Html$br = _VirtualDom_node('br');
+var author$project$Main$title = F3(
+	function (val, title_en, title_jp) {
+		return A2(
+			elm$html$Html$div,
+			_List_fromArray(
+				[
+					elm$html$Html$Attributes$class('number-box')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$p,
+					_List_fromArray(
+						[
+							elm$html$Html$Attributes$class('number')
+						]),
+					_List_fromArray(
+						[
+							elm$html$Html$text(val)
+						])),
+					A2(
+					elm$html$Html$p,
+					_List_fromArray(
+						[
+							elm$html$Html$Attributes$class('title')
+						]),
+					_List_fromArray(
+						[
+							elm$html$Html$text(title_en),
+							A2(elm$html$Html$br, _List_Nil, _List_Nil),
+							elm$html$Html$text(title_jp)
+						]))
+				]));
+	});
 var author$project$Main$view = function (model) {
 	return {
 		body: _List_fromArray(
 			[
 				author$project$Main$siteHeader,
-				A3(
-				elm$html$Html$node,
-				'main',
-				_List_Nil,
-				_List_fromArray(
-					[
-						A2(
-						elm$html$Html$section,
-						_List_Nil,
-						_List_fromArray(
-							[
-								A2(
-								elm$html$Html$h1,
-								_List_Nil,
-								_List_fromArray(
-									[
-										elm$html$Html$text('Elm official...')
-									])),
-								A2(
-								elm$html$Html$ul,
-								_List_Nil,
-								_List_fromArray(
-									[
-										A2(
-										elm$html$Html$li,
-										_List_Nil,
-										_List_fromArray(
-											[
-												A2(
-												elm$html$Html$a,
-												_List_fromArray(
-													[
-														elm$html$Html$Attributes$href('https://elm-lang.org'),
-														elm$html$Html$Attributes$target('_blank')
-													]),
-												_List_fromArray(
-													[
-														elm$html$Html$text('Elm - A delightful language for reliable webapps')
-													]))
-											])),
-										A2(
-										elm$html$Html$li,
-										_List_Nil,
-										_List_fromArray(
-											[
-												A2(
-												elm$html$Html$a,
-												_List_fromArray(
-													[
-														elm$html$Html$Attributes$href('https://guide.elm-lang.org'),
-														elm$html$Html$Attributes$target('_blank')
-													]),
-												_List_fromArray(
-													[
-														elm$html$Html$text('Introduction · An Introduction to Elm')
-													]))
-											]))
-									]))
-							])),
-						A2(
-						elm$html$Html$section,
-						_List_Nil,
-						_List_fromArray(
-							[
-								A2(
-								elm$html$Html$h1,
-								_List_Nil,
-								_List_fromArray(
-									[
-										elm$html$Html$text('Community in Japan')
-									])),
-								A2(
-								elm$html$Html$ul,
-								_List_Nil,
-								_List_fromArray(
-									[
-										A2(
-										elm$html$Html$li,
-										_List_Nil,
-										_List_fromArray(
-											[
-												A2(
-												elm$html$Html$a,
-												_List_fromArray(
-													[
-														elm$html$Html$Attributes$href('https://elm-lang.jp'),
-														elm$html$Html$Attributes$target('_blank')
-													]),
-												_List_fromArray(
-													[
-														elm$html$Html$text('Elm-jp')
-													]))
-											])),
-										A2(
-										elm$html$Html$li,
-										_List_Nil,
-										_List_fromArray(
-											[
-												A2(
-												elm$html$Html$a,
-												_List_fromArray(
-													[
-														elm$html$Html$Attributes$href('https://guide.elm-lang.jp'),
-														elm$html$Html$Attributes$target('_blank')
-													]),
-												_List_fromArray(
-													[
-														elm$html$Html$text('はじめに · An Introduction to Elm')
-													]))
-											])),
-										A2(
-										elm$html$Html$li,
-										_List_Nil,
-										_List_fromArray(
-											[
-												A2(
-												elm$html$Html$a,
-												_List_fromArray(
-													[
-														elm$html$Html$Attributes$href('http://jinjor-labo.hatenablog.com/entry/2019/02/26/112019'),
-														elm$html$Html$Attributes$target('_blank')
-													]),
-												_List_fromArray(
-													[
-														elm$html$Html$text('『基礎からわかる Elm』（Author\'s post）')
-													]))
-											]))
-									]))
-							]))
-					])),
+				author$project$Main$homeGif,
+				A3(author$project$Main$title, '01', 'Our Vision', '団体理念'),
+				A2(author$project$Main$detail, '宇宙産業を日本の基幹産業に', '私たちTELSTARは、宇宙産業を日本の基幹産業にすることを理念に掲げています。近い未来、宇宙産業は私たちの社会に欠かせないものになると考えています。中高生の”宇宙は難しい”という意識を興味へと変えることで、来たる宇宙時代、日本が宇宙産業で世界をリードしていく未来を目指しています。'),
 				author$project$Main$siteFooter
 			]),
 		title: 'Elm 0.19 starter'
